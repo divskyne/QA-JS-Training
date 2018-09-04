@@ -1,0 +1,54 @@
+      table {
+          border-collapse: collapse;
+          position: relative;
+          left: 8px;
+      }
+      #project {
+          border: 1px solid black;
+          border-spacing: 2px;
+      }
+      #nav {
+        background-color: #161617;
+        padding: 4px;
+        border-radius: 20px;
+      }
+      #inside {
+        position:relative;
+        padding: 10px;
+      }
+      #inside > a {
+        position:relative;
+        margin: 10px;
+        color: white;
+        text-shadow: 1px 1px #022B3E;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      #inside > a:hover  {
+        background:#ffffff;
+        color:#000000;
+        border-radius: 24px;
+        padding: 6px;
+      }
+      #inside > a:visited  {
+        color:#817AEA;
+        text-decoration: none;
+        text-shadow: none;
+        border-radius: 4px;
+        padding: 4px;
+      }
+      #menu {
+        padding: 2px;
+      }
+      #bioPic {
+        position: relative;
+        padding: 5px;
+        border: 2px dotted blue;
+      }
+      #content {
+        border-radius: 12px;
+        background-color: #817AEA;
+        margin-top: 10px;
+        padding:10px;
+        padding-top: -10px;
+      }

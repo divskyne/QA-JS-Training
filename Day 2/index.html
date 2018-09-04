@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Training</title>
+	<script src="javaScript.js" type="text/javascript"></script>
+</head>
+<body>
+	
+<div id='first'></div>
+<div id='second'></div>
+<div id='third'></div>
+<div id='fourth'></div>
+<div id='fifth'></div>
+<div id='sixth'></div>
+
+
+<button type="submit" onclick="printMsg(displaySum(),'first')">alert sum</button>
+<button type="submit" onclick="printMsg(changeAge(),'second')">changeAge</button>
+
+<input type="text" id="firstValue">
+<input type="text" id="secondValue">
+<button type="submit" onclick="calculateIt('a')">+</button>
+<button type="submit" onclick="calculateIt('b')">-</button>
+<button type="submit" onclick="calculateIt('c')">*</button>
+<button type="submit" onclick="calculateIt('d')">/</button>
+<textarea readonly="yes" id="textArea"></textarea>
+
+<button type="submit" onclick="printString()">PrintMatt</button>
+<button type="submit" onclick="printMsg(stringMatt(),'fourth')">PrintMatty</button>
+<button type="submit" onclick="upperString(stringMatt(), 'fifth')">UpperCase</button>
+<script type="text/javascript">
+	var string1 = "2";
+	var int1 = 4;
+	var node = document.getElementById('sixth');
+</script>
+</body>
+</html>
