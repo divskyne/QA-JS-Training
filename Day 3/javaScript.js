@@ -61,27 +61,65 @@ function findDetail()
 function changeText()
 {
     var span = document.getElementById("mouse");
-    span.innerHTML = document.getElementById('textInField').value;
+    console.log(span.innerHTML);
+    
+    if(span.innerHTML=="The Shafeeq")
+    {
+        span.innerHTML = "I hate you";
+    }
+    else if(span.innerHTML=="I hate you")
+    {
+        span.innerHTML = "The Shafeeq";
+    }
+    //span.innerHTML = document.getElementById('textInField').value;
 }
 
 var number = 10;
 function movingMouse()
 {
     var span = document.getElementById("mouse");
-    console.log(span.style.fontSize );
     span.style.top = (window.event.clientY)+"px";
     span.style.left = (window.event.clientX)+"px";
     if(window.event.altKey)
     {
         number++;
     }
-    /* else if (window.event.ctrlKey)
+     else if (window.event.ctrlKey)
     {
         number--;
-    } */
-    else
-    {
-        number--;
-    }
-    span.style.fontSize = number+"px"
+    } 
+    span.style.fontSize = number+"px";
+    
 }
+function changeColour(colour)
+{
+    var span = document.getElementById("mouse");
+    console.log(colour);
+    span.style.backgroundColor = colour;
+}
+function toggleVisibility()
+{
+    var span = document.getElementById("mouse");
+    console.log(span.style.visibility);
+    if (span.style.visibility=="hidden")
+    {
+        span.style.visibility = "visible";
+    }
+    else if (span.style.visibility=="visible")
+    {
+        span.style.visibility = "hidden";
+    }
+    else if(span.style.visibility=="")
+    {
+        span.style.visibility = "hidden";
+    }
+}
+var person =
+{
+    name: "First",
+    age: 25,
+    job: "Engineer",
+    assistants: [{name:"FSub"},{name:"FSub2"},{name:"FSub2"}],
+    toString: function() { return "Name: "+this.name+" "+"Age: "+this.age}
+};
+//console.log(JSON.stringify(person));
