@@ -118,8 +118,15 @@ var person =
 {
     name: "First",
     age: 25,
+    assistants: [{name:"FSub"},{name:"FSub2"},{name:"FSub3"}],
     job: "Engineer",
-    assistants: [{name:"FSub"},{name:"FSub2"},{name:"FSub2"}],
     toString: function() { return "Name: "+this.name+" "+"Age: "+this.age}
 };
-//console.log(JSON.stringify(person));
+function printJSON()
+{
+    console.log(person);
+    for (item in person.assistants) {
+        console.log(person.assistants[item].name);
+    }
+}
+printJSON();
