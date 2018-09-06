@@ -1,2 +1,2 @@
 # QA-JS-Training
-Word from a week of training in JavaScript
+Work from a week of training in JavaScript
