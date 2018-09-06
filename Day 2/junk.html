@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<img src="invader.jpg" id="shooter">
+
+<script type="text/javascript">
+    
+window.onkeydown = function (e) {
+    if (!e) {
+        e = window.event;
+    }
+    
+
+    var code = e.keyCode;
+
+    var shooter = document.getElementById("shooter");   
+
+
+    var top = parseInt (shooter.style.top, 10);
+    var left = parseInt (shooter.style.left, 10);
+
+
+    if ( code == 37 ) { //LEFT
+
+
+        if ( left > 0 ) {
+            shooter.style.left = left - 10 + 'px';
+        }
+    } else if ( code == 38 ) { //UP
+   
+        if ( top > 0 ) {
+            shooter.style.top = top - 10 + 'px';
+        }
+    } else if ( code == 39 ) {
+
+
+        if ( left+shooter.width+10 < window.innerWidth ) {
+            shooter.style.left = left + 10 + 'px';
+        }
+    } else if ( code == 40 ) {
+        if ( top+shooter.height+10 < window.innerHeight ) {
+            shooter.style.top = top + 10 +'px';
+        }
+    }
+}
+
+
+</script>
+
+</body>
+</html>
+

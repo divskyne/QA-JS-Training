@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+<style type="text/css">
+	
+	#gameContainer {
+		width: 400px;
+		height: 600px;
+		position: relative;
+		background-color: grey;
+	}
+
+
+
+</style>
+
+<script>
+
+	var x = 20;
+	var T = 25;
+	var L = 20;
+	var direction = "right";
+
+	onkeypress = function moveShooter(){
+		
+		if(window.event.keyCode == 100) {
+			if(parseInt(document.getElementById("shooter").style.left) >= 330){}
+			else {
+				x += 10;
+				document.getElementById("shooter").style.left = x + "px";
+			}
+		}
+		if(window.event.keyCode == 97) {
+			if(parseInt(document.getElementById("shooter").style.left) <= 20){}
+			else {
+				x -= 10;
+				document.getElementById("shooter").style.left = x + "px";
+			}
+		}
+		if(window.event.keyCode == 32) {
+
+		}
+	}
+
+	onkeypress = function moveInvaders(){
+
+		if (direction == "right") {
+			if (parseInt(document.getElementById("invaders").style.left<330)) {
+				L+=10;
+				document.getElementbyId("invaders").style.left = L + "px"
+			} else {
+				T+=25;
+				direction = "left";
+				document.getElementbyId("invaders").style.top = T + "px";
+			}
+		} if (direction == "left") {
+			if (parseInt(document.getElementById("invaders").style.left>20)) {
+				L+=10;
+				document.getElementbyId("invaders").style.left = L + "px"
+			} else {
+				T+=25;
+				direction = "right";
+				document.getElementbyId("invaders").style.top = T + "px";
+			}
+		} if (T == 500) {
+			console.log("Game over!")
+		}
+	}
+
+</script>
+
+</head>
+
+<body>
+	<div id = "gameContainer">
+<!-- 		<button onclick="moveInvaders()">Press Start</button> -->
+		<span id = "invaders" style = "position:absolute; top:T; left:L ;">INVADERS</span>
+		<pre id = "shooter" style = "position:absolute; top:500px; left:x ;"> 00||00 </pre>
+	</div>
+</body>
+
+</html>
